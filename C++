@@ -1,4 +1,4 @@
-SIMPLE CALCULATOR
+ SIMPLE CALCULATOR
 
  #include <iostream>
 
