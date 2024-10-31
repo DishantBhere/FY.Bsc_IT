@@ -1,0 +1,649 @@
+ 1A
+
+AIM: Write a program in Scilab to find number of proper subsets of A where
+
+(i) |A| = 5.
+
+(ii) A = (Triangle, Rectangle, Square, Pentagon, Hexagon, Star).
+
+code:- (i)
+
+n=5;
+m=2^n-1;
+disp(m,'number of proper subset A =');
+(ii)
+
+Triangle=1;
+Rectangle=2; 
+Square=3; 
+Pentagon=4; 
+Hexagon=5; 
+Star=6;
+A=[Triangle, Rectangle, Square, Pentagon, Hexagon, Star];
+n=length(A);
+m=2^n-1;
+disp(m,'number of proper subset A =');
+1B
+
+AIM: Write a program in Scilab to find cardinality of the following sets
+
+(i) A = {1, 3, 5 7, 9}
+
+(ii) B = (x, y, z)
+
+(iii) C = {Apple, Acer, Sony, Dell, Lenovo}
+
+code:-
+
+A={1,3,5,7,9};
+a=length(A);
+disp('cardinality of set A is',a);
+x=1;
+y=2;
+z=3;
+B=[x,y,z];
+b=length(B);
+disp('cardinality of set B is',b);
+Apple=1;
+Acer=2;
+Sony=3;
+Dell=4; 
+Lenovo=5;
+C=[Apple,Acer,Sony,Dell,Lenovo];
+c=length(C);
+disp('cardinality of set C is',c);
+D=[2,3,4,5];
+d=length(D);
+disp('cardinality of set D is',d);
+
+
+1C
+
+AIM:Write a program in Scilab for the following inclusion exclusion problems
+
+Q.1 Out of 1200 students of a college, 552 took Economics, 627 took Mathematics, 540 took Information Technology, 217 took Economics and Mathematics, 307 took Economics and Information Technology, 240 took Mathematics and Information Technology, 213 took all the three subjects.
+
+(i) How many took at least one of the three subjects?
+
+(ii) How many took none of the three subject?
+
+code:(i)
+
+U=1200;
+E=552;
+M=627;
+IT=540;
+EandM=217;
+EandIT=307;
+MandIT=240;
+EorMorIT=E+M+IT-EandM-EandIT-MandIT;
+disp('The number of student taken at least 1/3 subject is',EorMorIT);
+N=U-EorMorIT;
+disp('The number of student not taken any of the three subject is',N);
+(ii)
+
+U=550;
+F=285;
+H=195;
+B=115;
+FandB=45;
+FandH=70;
+HandB=50;
+N=100;
+ForHorB=U-N;
+FandHandB=ForHorB-F-H-B+FandB+HandB+FandH;
+disp('the no of people watch all the three games is',FandHandB);
+onlyF=F-FandH-FandB+FandHandB;
+onlyH=H-HandB-FandH+FandHandB;
+onlyB=B-FandB-HandB+FandHandB;
+P=onlyF+onlyH+onlyB;
+disp('the number of the people watch one of the three games is',P);
+2A
+
+AIM: Write a program in Scilab to compute factorial by recursively defined functions
+
+code:-
+
+function [k]=fact1(a)
+    if(a<0|a>170)then
+        k=-1;
+        disp('INVALD');
+        break;
+    elseif(a==0|a==1)then
+        k=1;
+    else
+        k=a*fact1(a-1);
+        end
+endfunction
+a=input("Enter value:");
+p=fact1(a);
+disp(p,'Factorial value is:');
+2B
+
+AIM: Write a program in Scilab to evaluate the following polynomials:
+
+(i) f(x) = x³- 2x + 1 at x = 2.
+
+(ii) g(x) = x²-1 at x = 3.
+
+(iii) h(x) = 2x³-7x2+4x-15 at x = 5.
+
+code:-
+
+f=poly([1,-2,0,1],'x','c');
+disp('the polynomial f is',f);
+k=horner(f,2);
+disp('value of polynomial f at x=2 is',k);
+g=poly([1,-1],'x','r');
+disp('the polynomial g is',g);
+L=horner(g,3);
+disp('value of polynomial g at x = 3 is',L);
+x=poly(0,'x');
+h=2*x^3-7*x^2+4*x-15;
+disp('the polynomial h is',h);
+m=horner(h,5);
+disp('value of the polynomial h at x = 5 is',m);
+3A
+
+AIM: Write a program in Scilab for the following problems:
+
+Q.1 Suppose a bookcase shelf has 6 Mathematics textbooks, 5 Programming textbooks and 3 Networking textbooks. Find the number of ways a student can choose a textbook.
+
+Q.2 Find number of ways to select an integer between 1 to 20 which are divisible by 4 or prime.
+
+Q.3 Find number of ways to select an integer between 1 to 20 which are divisible by 2 or 5.
+
+code:
+
+M=6;
+P=5; 
+N=3;
+T=M+P+N;
+disp(T,'Number of ways a student can choose a textbook:');
+E=[4,8,12,16,20]; 
+F=[2,3,5,7,11,13,17,19];
+EorF=union(E,F);
+disp(length(EorF),'Number of ways of selecting an integer between 1 to 20 which are divisible by 4 or prime:');
+P=[2,4,6,8,10,12,14,16,20];
+Q=[5,10,15,20];
+R=intersect(P,Q);
+PorQ=length(P)+length(Q)-length(R)
+disp(PorQ,'Number of ways of selecting an integer between 1 to 20 which are divisible by 2 or 5:');
+3B
+
+AIM: Write a program in Scilab for the following problems:
+
+Q.1 Suppose a bookcase shelf has 6 Mathematics textbooks, 5 Programming textbooks and 3 Networking textbooks. Find the number of ways a student can choose one of each type of textbook.
+
+Q.2 How many four digit numbers can be formed with digits 0 - 9 if
+
+(i) repetition of digits not allowed?
+
+(ii) repetition of digits allowed?
+
+code:
+
+M=6;
+P=5;
+N=3;
+T=M*P*N;
+disp('Number of ways a student can choose a textbook of each type:',T);
+n=10;
+k1=(n-1)*(n-1)*(n-2)*(n-3);
+disp('Number of four digit numbers without repetition of digits:',k1);
+k2=(n-1)*n*n*n;
+disp('Number of four digit numbers with repetition of digits:',k2);
+3C
+
+AIM: Write a program in Scilab for the following
+
+Q.1 Find first six factorial values by using n!= nx (n-1)! without using inbuilt factorial function.
+
+Q.2Compute (i) 6! (ii) 6!/4!(iii) 10!/7!, by using inbuilt factorial function.
+
+code:
+
+f0=1;
+disp(f0,'0!=');
+f1=1*f0;
+disp(f1,'1!=');
+f2=2*f1;
+disp(f2,'2!=');
+f3=3*f2;
+disp(f3,'3!=');
+f4=4*f3;
+disp(f4,'4!=');
+f5=5*f4;
+disp(f5,'5!=');
+f6=factorial(6);
+disp(f6,'6!=');
+k1=factorial(6)/factorial(4); 
+disp(k1,'value of 6!/4! is: '); 
+k2-factorial(10)/factorial(7); 
+disp(k2,'value of 10!/7! is:');
+3D
+
+AIM: Write a program in Scilab to calculate Binomial Coefficient "Cr, where n and r values are given by user (n=10 & r=7) and to verify "C, = "Cnr (for n=8 & r=5).
+
+code:
+
+function [k]=bnml(n, r)
+         k=factorial(n)/(factorial(r)*factorial(n-r));
+endfunction
+a=input('Enter value for n:');
+b=input('Enter value for r:');
+ans=bnml(a,b);
+disp(ans,'Value of required binomial coefficient is:');
+n=input('Enter value for n:');
+r=input('Enter value for r:');
+p=bnml(n,r);
+disp(p,'Value of nCr is:');
+q=bnml(n,n-r);
+disp(q,'Value of nC(n-r) is:');
+if p==q then
+     disp('Hence nCr=nC(n-r)verified ')
+else
+   disp('nCr=nC(n-r)not verified ') 
+end
+3E
+
+AIM: Write a program in Scilab for the following:
+
+Q.1 In how many ways can a committee of 8 people be formed out of a group of 10 men and 5 women?
+
+Q.2 In how many ways can a committee of 6 men and 2 women be formed out of a group of 10 men and 5 women?
+
+code:
+
+function [k]=cmbntn(n, r)
+ k=factorial(n)/(factorial(r)*factorial(n-r));
+endfunction
+m=10;
+w=5;
+r=8;
+ans1=cmbntn(m+w,r);
+disp(ans1,'Number of ways to form a committee of 8 out of a group of 10 men and 5 women is:');
+r1=6;
+r2=2;
+ ans2=cmbntn(m,r1)*cmbntn(w,r2);
+disp(ans2,'Number of ways to form a committee of 6 men and 2 women out of a group of 10 men and 5 women is:');
+3F
+
+AIM: Write a program in Scilab for the following:
+
+Q.1 A bagel shop sells 5 kinds of bagels. Find the number of ways a customer can buy: (a) 8 bagels; (b) a dozen bagels.
+
+code:
+
+function [k]=rcmbntn(r, m)
+k=factorial(r+(m-1))/(factorial(r)*factorial(m-1));
+endfunction
+r1=8;
+m=5;
+ans1=rcmbntn(r1,m);
+disp(ans1,'Number of ways a customer can buy 8 bangles from 5 different kinds of bangles is:');
+r2=12;
+ans2=rcmbntn(r2,m);
+disp(ans2,'Number of ways a customer can buy 12 bangles from 5 different kinds of bangles is:');
+4A
+
+AIM: Write a program in Scilab for the following:
+
+Q.1 Suppose an uniform dice is rolled and let A be an event that an even number appears, B be an event that an odd number appears and C be an event that a prime number appears. Then find the events AUC, BNC, C. Also verify that the events A and B are mutually exclusive events.
+
+Q.2 Let a fair coin is tossed three times and A be an event that at least two head appears and B be an event that all the tosses are same. Then find the events AUB and AnB.
+
+code:-
+
+S1=[1,2,3,4,5,6];
+disp(S1,'Sample splace for dice throw experiment is:')
+A=[2,4,6];
+disp(A,'Event A of getting even number is:');
+B=[1,3,5];
+disp(B,'Event B of getting odd number is:');
+C=[2,3,5];
+disp(C,'Event C of getting prime number is:');
+disp(union(A,C),'The event that an even or a prime number occurs:');
+disp(intersect(B,C),'The event that an odd prime number occurs:');
+disp(setdiff(S1,C),'The event that a prime number does not occur:');
+if intersect(A,B)==[] then
+    disp('Events A and B are mutually exclusive events.');
+else
+    disp('Events A and B are not mutually exclusive events.');
+end
+S2=["HHH","HHT","HTH","HTT","THH","THT","TTH","TTT"];
+disp(S2,'Sample space for coin toss experiment is:');
+P=["HHH","HHT","HTH","THH"];
+disp(P,'Event a of getting at least two heads is:');
+Q=["HHH","TTT"];
+disp(Q,'Event B of all tosses result in same is:');
+disp(union(P,Q),'Union of A and B event:');
+disp(intersect(P,Q),'Intersection of A and B event:');
+4B
+
+AIM: Write a program in Scilab for the following:
+
+Q.1 Two uniform dice are rolled. Find the probability of (i) an event A that sum of the numbers is at most 6.
+
+(ii) an event B that sum of the numbers is at least 10.
+
+code:
+
+disp('Two  uniform dice are rolled and Sum of the out outcomess are observed:');
+S=[2,3,4,5,6,7,8,9,10,11,12];
+disp('The probability space is as follows:');
+P2=1/36,P3=2/36,P4=3/36,P5=4/36,P6=5/36,P7=6/36,P8=5/36,P9=4/36,P10=3/36,P11=2/36,P12=1/36
+disp('A is the event that sum of the outcomes is at most 6 and B is the event that sum of the outcomes is at least 10');
+PA=P2+P3+P4+P5+P6;
+disp(PA,'Probability of event A:');
+PB=P10+P11+P12;
+disp(PB,'Probability of event B:');
+4C
+
+AIM: Write a program in Scilab for the following:
+
+Q.1 Suppose a person is selected at random from a group of 100 people where 45 likes to eat Mango, 35 likes to eat Orange, and 15 likes to eat both Mango and Oranges. Find the probability that the selected person likes Mango or Orange.
+
+code:
+
+disp("Experiment:selection of a person out of 100 people") 
+T=100;
+M=45;
+O=35;
+MandO=15;
+PM=M/T;
+disp(PM,'Probability of people like Mango:');
+PO=O/T;
+disp(PO,'Probability of people like Orange:'); 
+PMandO=MandO/T;
+disp(PMandO,'Probability of people like both Mango and Orange:'); 
+PMorO=PM+PO-PMandO;
+disp(PMorO,'Probability of the selected person likes Mango or Orange:');
+4D
+
+AIM: Write a program in Scilab for the following:
+
+Q.1 Consider a family with three children and let A be an event that first child is a boy, B be an event that second child is a boy and C be an event that two successive children are boy. Find which of the two events are independent events.
+
+code:
+
+B=1;
+G=2;
+S=[111,112,121,122,211,212,221,222];
+A=[1111,112,121,122];
+B=[111,112,211,212];
+C=[111,112,211];
+PA=length(A)/length(S);
+disp(PA,'Probability of A is:');
+PB=length(B)/length(S); 
+disp(PB,'Probability of B is:');
+PC=length(C)/length(S);
+disp(PC,'Probability of C is:');
+AandB=intersect(A,B);
+AandC=intersect(A,C);
+BandC=intersect(B,C);
+PAandB=length(AandB)/length(S);
+disp(PAandB,'Probability of the event AnB is:');
+PAandC=length(AandC)/length(S);
+disp(PAandC,'Probability of the event AnC is:');
+PBandC=length(BandC)/length(S);
+disp(PBandC,'Probability of the event BnC is:');
+if((PA*PB)==PAandB)
+disp('A and B are independent ');
+else
+disp('A and B are dependent ');
+end
+if((PA*PC)==PAandC)
+disp('A and C are independent ');
+else
+disp('A and C are dependent ');
+end
+4E
+
+AIM: Write a programme in Scilab for the following:
+
+Q.1 A class has 14 boys and 6 girls. Suppose 4 students are selected at random from the class. Find the probability that they are all boys.
+
+code:
+
+t=20;
+b=14;
+P1=b/t;
+P2=(b-1)/(t-1);
+P3=(b-2)/(t-2);
+P4=(b-3)/(t-3);
+P=P1*P2*P3*P4;
+disp(P,'Probability that all four selected students are boy:');
+5A
+
+AIM: Write a program Scilab for the following:
+
+Q. In the graph below, determine which of the following walks are trails, paths, circuits, or simple circuits
+
+code:
+
+A=[0 1 0 0 0 0;1 0 1 0 0 0;0 1 1 1 0 0;0 0 1 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0 ];
+disp(A,'Adjacency matrix of A is:');
+disp('This walk has a repeated vertex but does not have a repeated edge,so it is a trail from v1 to v4 but not a path ');
+B=[0 1 0 0 0 0;1 0 0 1 0 0;0 0 0 1 0 0;0 1 1 0 0 0;0 0 1 0 0 0;0 0 0 0 0 0];
+disp(B,'Adjacency matrix of B is:');
+disp('This is just a walk from v1 to v5.It is not a trail because it has a repeated edge.');
+C=[0 0 0 0 0 0;0 0 1 0 0 1;0 1 0 1 1 1;0 0 1 0 1 0;0 0 1 1 0 0;0 1 1 0 0 0];
+disp(C,'Adjacency matrix of C is:');
+disp('This walk starts and ends at v2,and does not have a repeated edge, so it is a circuit.Since the vertex v3 is repeated in the middle,it is not a simple circuit.');
+D=[0 0 0 0 0 0;0 0 1 0 0 1;0 1 0 1 0 0;0 0 1 0 1 0;0 0 0 1 0 1;0 1 0 0 1 0];
+disp(D,'Adjacency matrix of D is:');
+disp('This walk starts and ends at v2,does not have a repeated edge,and does not have a repeated vertex.Thus it is a simple circuit.');
+E=[0 1 0 0 0 0;1 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0];
+disp(E,'Adjacency matrix of E is:');
+disp('This is just a closed walk starting and ending at v1.It is not a circuit because edge e1 is repeated.');
+F=[0 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0;0 0 0 0 0 0];
+disp(F,'Adjacency matrix of F is:');
+disp('The first vertex of this walk is the same as its last vertex,but it does not contain an edge,and so it is not a circuit.It is a closed walk from vi to v1.');
+5B
+
+AIM: Write a program Scilab for the following:
+
+Q. Find minimum spanning tree for the following graph by using Kruskal's algorithm
+
+code:
+
+disp('Edges of the graph are:');
+AB=3
+AC=2
+BC=3
+CD=4
+CE=6
+DE=5
+DF=1
+EF=6
+W=[AB,AC,BC,CD,CE,DE,DF,EF];
+V=int32(M);
+L=gsort(V);
+N=[DF,AC,AB,CD,DE];
+disp(N,'weights of edges in minimum spanning tree:');
+k=sum(N);
+disp(k,'weight of minimum spanning tree is:');
+disp('finding minimum spanning tree by another method:');
+H=gsort(V,'g','i');
+N2=[DE,CD,BC,AC,DF];
+disp(N2,'weights of edges in minimum spanning tree:');
+k2=sum(N2);
+disp(k2,'weights of the minimum spanning tree is:');
+6A
+
+
+ADJACENCY MATRIX
+
+AIM: Write a program in Scilab to display adjacency matrix of the following digraph and number of edges.
+
+code:
+
+A=[0 0 0 1;1 0 1 1;1 0 0 1;1 0 1 0];
+disp(A,'Adjacency matrix of first digraph is:');
+k=sum(A);
+disp(k,'Number of edges in first digraph is:');
+B=[0 0 0 1;2 1 1 0;0 0 0 0;0 1 1 0];
+disp(B,'Adjacency matrix of second digraph is:');
+n=sum(B);
+disp(n,'Number of edges in second digraph is:');
+6B
+
+PATH MATRIX
+
+AIM:Write a program in Scilab to compute and display path (reachability) matrix and to check whether the following digraphs are strongly connected:
+
+code:(i)
+
+A=[0 1 0;1 0 1;1 1 0];
+disp(A,'Adjacency matrix of first digraph G is:');
+B3=A+A^2+A^3;
+disp(B3,'B3 matrix for the given digraph is:');
+k=0;
+for i=1:9 
+      if B3(i)~=0 then 
+          B3(i)=1;
+          end
+       end
+disp(B3,'Path (reachability)matrix P for given digraph is:');
+for i=1:9 
+    if B3(i)==0 then
+       k=1;
+        end 
+  end
+if k==1 then
+disp('There are zero entries in path matrix P,therefore the digraph is not strongly connected.');
+else
+disp('There is no zero entry in path matrix P,therefore the digraph is strongly connected.');
+end
+(ii)
+
+A=[0 0 0 1;1 0 1 1;1 0 0 1;1 0 1 0];
+disp(A,'Adjacency matrix of second digraph is:');
+B4=A+A^2+A^3+A^4;
+disp(B4,'B4 matrix for the given digraph is:');
+k=0;
+for i=1:16 
+     if B4(i)~=0 then
+        B4(i)=1;
+    end
+ end
+disp(B4,'Path (reachability) Matrix P for given digraph is:');
+for i=1:16
+     if B4(i)==0 then
+        K=1;
+     end
+ end
+if k==1 then
+disp('There are zero entries in path matrix P, therefore the digraph is not strongly connected');
+else 
+disp('There is no zero entry in path matrix P, therefore the digraph is strongly connected');
+end
+7A
+
+EQUIPROBABLE SPACES
+
+Q.1 Suppose an uniform die is rolled and let A be an event that an
+
+even number appears, B be an event that an odd number
+
+appears and C be an event that a prime number appears. Then
+
+find the probability of the events A,B,C,A U B, B ∩ C, CC.
+
+code:
+
+S=[1,2,3,4,5,6];
+A=[2,4,6];
+B=[1,3,5];
+C=[2,3,5];
+AorC=union (A,C);
+AorB=union(A,B);
+BandC=intersect(B,C);
+ complimentC=setdiff(S,C);
+PA =length(A)/length(S);
+disp(PA, 'Probability of occurrence of event A:');
+PB=length(B)/length(S);
+disp(PB, 'Probability of occurrence of event B:');
+PC=length(C)/length(S);
+disp(PC,' Probability of occurrence of event C:');
+PAorC=length(AorC)/length(S);
+disp(PAorC, 'Probability of the event that an even or a prime number occurs:');
+PAorB=length(AorB)/length(S);
+disp(PAorB, 'Probability of the event that an even or an odd number occurs:');
+PBandC=length(BandC)/length(S);
+disp(PBandC,' Probability of the event that a prime odd number occurs:');
+PcomplimentC=length(complimentC)/length(S);
+disp(PcomplimentC,' Probability of the event that prime number does not occur:');
+7B
+
+CONDITIONAL PROBABILITY
+
+AIM: Write a program in Scilab for the following:
+
+A) A pair of fair dice is thrown. Find the probability that the
+
+sum is 10 or greater if:
+
+(a) 5 appears on the first die;
+
+(b) (b) 5 appears on at least one die.
+
+code:(i)
+
+disp('Experiment: Two uniform dice are rolled and sum of the outcomes are observed');
+E1=['(5,1)','(5,2)','(5,3)','(5,4)','(5,5)','(5,6)'];
+disp(E1,'Event that 5 appears on first die:'); A=['(4,6)','(5,5)','(5,6)','(6,4)','(6,5)','(6,6)'];
+disp(A,'Event that sum of the outcomes are 10 or greater:');
+AandE1=intersect(A,E1);
+disp(AandE1,'Event that 5 appears on the first die and sum of the outcomes are 10 or greater:');
+P1=2/6;
+disp(P1,'Probability of event that sum of the outcomes are 10 or greater if 5 appears on the first die:');
+E2=['(5,1)','(5,2)','(5,3)','(5,4)','(5,5)','(5,6)','(1,5)','(2,5)','(3,5)','(4,5)','(6,5)'];
+disp(E2,'Event that 5 appears on at least one die:');
+AandE2=intersect(A,E2);
+disp(AandE2,'Event that 5 appears on at least one die and sum of the outcomes are 10 or greater:');
+P2=3/11;
+disp(P2,'Probability of event that sum of the outcomes are 10 or greater if 5 appears on at least one die:');
+(ii)
+
+ In a certain college town, 35% of the students failed
+
+mathematics, 25% failed programming, and 15% failed
+
+both mathematics and programming. A student is selected
+
+at random.
+
+(a) If he failed programming, find the probability that he
+
+also failed mathematics.
+
+(b) If he failed mathematics, find the probability that he
+
+also failed programming.
+
+(c) Find the probability that he failed mathematics or programming.
+
+(d) Find the probability that he failed neither
+
+mathematics nor programming.
+
+code:
+
+PM=0.35;
+disp(PM,'Probability that student failed in mathematics:');
+PP=0.25;
+disp(PP,'Probability that student failed in programming:');
+PMnP=0.15;
+disp(PM,'Probability that student failed in mathematics and programming:');
+PMifP=PMnP/PP;
+disp(PMifP,'Probability that a student failed in mathematics if he failed in programming:');
+PPifM=PMnP/PM;
+disp(PPifM,'Probability that a student failed in programming if he failed in mathematics:');
+PMorP=PM+PP-PMnP;
+disp(PMorP,'Probability that a student failed in mathematics or programming:');
+PNeither=1-PMorP;
+disp(PNeither,'Probability that a student failed in neither mathematics nor programming:');
+
+                                 THANK YOU
