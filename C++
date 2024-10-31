@@ -1,0 +1,740 @@
+SIMPLE CALCULATOR
+
+ #include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int option;
+
+    float no1,no2;
+
+    cout<<"Enter two numbers:";
+
+    cin>>no1>>no2;
+
+    cout<<"--option--"<<endl;
+
+    cout<<"1.Add"<<endl;
+
+    cout<<"2.Subtract"<<endl;
+
+    cout<<"3.Multiply"<<endl;
+
+    cout<<"4.Divide"<<endl;
+
+    cin>>option;
+
+    switch(option)
+
+    {
+
+        case 1:
+
+        cout<<"sum="<<(no1+no2)<<endl;
+
+        break;
+
+        case 2:
+
+        cout<<"difference="<<(no1-no2)<<endl;
+
+        break;
+
+        case 3:
+
+        cout<<"product="<<(no1*no2)<<endl;
+
+        break;
+
+        case 4:
+
+        cout<<"division="<<(no1/no2)<<endl;
+
+        break;
+
+        default:
+
+        cout<<"Invalid Option"<<endl;
+
+    }
+
+    return 0;
+
+}
+
+HRS,SECONDS,MIN
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+int sec,h,m,s;
+
+cout<<"Enter Seconds:";
+
+cin>>sec;
+
+h=sec/3600;
+
+m=(sec%3600)/60;
+
+s=(sec%3600)%60;
+
+cout<<"Hours="<<h<<endl;
+
+cout<<"Minutes="<<m<<endl;
+
+cout<<"Second="<<s<<endl;
+
+return 0;
+
+}
+
+EVEN ODD
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int n,i,num,se=0,so=0;
+
+    cout<<"Enter count of number:";
+
+    cin>>n;
+
+    for(i=1;i<=n;i++)
+
+    {
+
+        cout<<"Enter an integer:";
+
+        cin>>num;
+
+        if(num%2==0)
+
+        se=se+num;
+
+        else
+
+        so=so+num;
+
+    }
+
+    cout<<"Sum of Even numbers="<<se<<endl;
+
+    cout<<"Sum of Odd numbers="<<so<<endl;
+
+    return 0;
+
+}
+
+CLASS   OBJECT STUDENT
+
+#include<iostream>
+
+using namespace std;
+
+class student
+
+{
+
+    int rollno;
+
+    char name[40];
+
+    public:
+
+    void input()
+
+    {
+
+        cout<<"Enter name and rollno:\n";
+
+        cin.getline(name,40);
+
+        cin>>rollno;
+
+    }
+
+    void output()
+
+    {
+
+        cout<<"Name:"<<name<<endl;
+
+        cout<<"Roll No:"<<rollno<<endl;
+
+    }
+
+};
+
+int main()
+
+{
+
+    student s;
+
+    s.input();
+
+    s.output();
+
+    return 0; 
+
+}
+
+STRUCTURE BANK EMP
+
+#include <iostream>
+
+using namespace std;
+
+struct BankEmployee
+
+{
+
+    char name[10];
+
+    int accountNo, balance, damt, wamt;
+
+};
+
+int main()
+
+{
+
+    char D;
+
+    BankEmployee E;
+
+    cout << "Enter employee name:" << endl;
+
+    cin >> E.name;
+
+    cout << "Enter employee account no:" << endl;
+
+    cin >> E.accountNo;
+
+    cout << "Enter employee balance:" << endl;
+
+    cin >> E.balance;
+
+    cout << "Do you want to Withdraw or Deposit: ";
+
+    cin >> D;
+
+    if (D == 'W')
+
+    {
+
+        cout << "Enter withdraw amount: ";
+
+        cin >> E.wamt;
+
+        E.balance = E.balance - E.wamt;
+
+        cout << "\nCustomer name: " << E.name;
+
+        cout << "\nAccount no: " << E.accountNo;
+
+        cout << "\nBalance amount: " << E.balance;
+
+    }
+
+    else
+
+    {
+
+        cout << "Enter deposit amount: ";
+
+        cin >> E.damt;
+
+        E.balance = E.balance + E.damt;
+
+        cout << "\nCustomer name: " << E.name;
+
+        cout << "\nAccount no: " << E.accountNo;
+
+        cout << "\nBalance amount: " << E.balance;
+
+    }
+
+
+
+    return 0;
+
+}
+
+COPY CONSTRUCTOR
+
+#include<iostream>
+
+using namespace std;
+
+class Demo
+
+{
+
+    public:
+
+    float a,b;
+
+    Demo(float x,float y)
+
+    {
+
+        a=x;
+
+        b=y;
+
+    }
+
+    Demo(Demo &r)
+
+    {
+
+        a=r.a;
+
+        b=r.b;
+
+        cout<<"Copy constructor\n";
+
+    }
+
+    void show()
+
+    {
+
+        cout<<"a="<<a<<endl;
+
+        cout<<"b="<<b<<endl;
+
+    }
+
+};
+
+int main()
+
+{
+
+    Demo m(20,30);
+
+    m.show();
+
+    Demo n=m;
+
+    n.show();
+
+    return 0;
+
+}
+
+STUDENT CLASS  POINTER
+
+#include <iostream>
+
+using namespace std;
+
+class Student
+
+{
+
+   int rollno;
+
+   char name[40];
+
+   public:
+
+   void input()
+
+   {
+
+     cout<<"Enter name:";
+
+     cin.getline(name,40);
+
+     cout<<"Enter Rollno:";
+
+     cin>>rollno;
+
+    }
+
+    void output() 
+
+   {
+
+     cout<<"Rollno:"<<rollno<<endl;
+
+     cout<<"Name:"<<name<<endl;
+
+    }
+
+  };
+
+     int main()
+
+   {
+
+     Student s;
+
+     Student *P=&s;
+
+     P->input();
+
+     cout<<"Student data...\n";
+
+     P->output();
+
+     return 0;
+
+    }
+
+FIBONACCI SERIES
+
+#include<iostream>
+
+using namespace std;
+
+class fibonacci
+
+{
+
+    int count;
+
+    public:
+
+    fibonacci()
+
+    {
+
+        cout<<"Enter a number:";
+
+        cin>>count;
+
+    }
+
+    void series()
+
+    {
+
+        int i,a=0,b=1,c;
+
+        for(i=1;i<=count;i++)
+
+        {
+
+            cout<<a<<"\t";
+
+            c=a+b;
+
+            a=b;
+
+            b=c;
+
+        }
+
+    }
+
+};
+
+int main()
+
+{
+
+    fibonacci fib;
+
+    cout<<"series..\n";
+
+    fib.series();
+
+    return 0;
+
+}
+
+SINGLE INHERITANCE
+
+using namespace std;
+
+#include<iostream>
+
+class person
+
+{
+
+    int age;
+
+    char name [40];
+
+    public:
+
+    void input()
+
+    {
+
+        cout<<"Enter name:";
+
+        cin. getline (name,40);
+
+        cout<<"Enter age:";
+
+        cin>>age;
+
+    }
+
+    void output ()
+
+    {
+
+        cout<<"Name:"<<name<<endl;
+
+        cout<<"Age:"<<age<<endl;
+
+    }
+
+};
+
+class Employee:public person
+
+{
+
+    int salary, id;
+
+    public:
+
+    void in_emp() 
+
+    {
+
+        cout<<"Enter ID:";
+
+        cin>>id;
+
+        cout<<"Enter Salary:";
+
+        cin>>salary;
+
+    }
+
+    void out_emp()
+
+    {
+
+        cout<<"ID:"<<id<<endl;
+
+        cout<<"Salary:"<<salary<<endl;
+
+    }
+
+};
+
+int main() 
+
+{
+
+    Employee emp;
+
+    emp.input();
+
+    emp.in_emp();
+
+    cout<<"employee data.... \n";
+
+    emp.output();
+
+    emp.out_emp();
+
+    return 0;
+
+}
+
+MULTIPLE INHERITANCE
+
+#include <iostream>
+
+using namespace std;
+
+
+
+class Exam
+
+{
+
+    int roll_no;
+
+    int marks;
+
+public:
+
+    void in_exam()
+
+    {
+
+        cout<<"Enter roll_no: ";
+
+        cin>>roll_no;
+
+        cout<<"Enter marks: ";
+
+        cin>>marks;
+
+    }
+
+    void out_exam()
+
+    {
+
+        cout<<"Roll No: "<<roll_no<<endl;
+
+        cout<<"Marks: "<<marks<<endl;
+
+    }
+
+};
+
+
+
+class Sports
+
+{
+
+    int score;
+
+public:
+
+    void in_score()
+
+    {
+
+        cout<<"Enter score: ";
+
+        cin>>score;
+
+    }
+
+    void out_score()
+
+    {
+
+        cout<<"Score: "<<score<<endl;
+
+    }
+
+};
+
+
+
+class Result: public Exam, public Sports
+
+{
+
+    char name[40];
+
+public:
+
+    void input()
+
+    {
+
+        cout<<"Enter name: ";
+
+        cin.getline(name, 40);
+
+        in_exam();
+
+        in_score();
+
+    }
+
+    void output()
+
+    {
+
+        cout<<"Name: "<<name<<endl;
+
+        out_exam();
+
+        out_score();
+
+    }
+
+};
+
+
+
+int main()
+
+{
+
+    Result res;
+
+    res.input();
+
+    cout<<"Result....\n";
+
+    res.output();
+
+    return 0;
+
+}
+
+SWAPPING 2NUM  POINTERS
+
+#include <iostream>
+
+using namespace std;
+
+
+
+void swapNumbers(int* ptr1, int* ptr2) 
+
+{
+
+    int temp = *ptr1;
+
+    *ptr1 = *ptr2;
+
+    *ptr2 = temp;
+
+}
+
+
+
+    int main() 
+
+{
+
+    int num1 = 10;
+
+    int num2 = 20;
+
+
+
+    cout << "Before swapping - num1: "<< num1 << ", num2: " << num2 << endl;
+
+
+
+    swapNumbers(&num1, &num2);
+
+
+
+    cout << "After swapping - num1: " << num1 << ", num2: " << num2 << endl;
+
+
+
+    return 0;
+
+}
+
+THANK YOU 
+
