@@ -1,0 +1,1600 @@
+1A] DESIGN WEBPAGE  USING DIFF.  TEXT FORMATTING
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+<meta charset="UTF-8">
+
+
+
+<title>Text Formatting Tags</title>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>Heading 1</h1>
+
+<h2>Heading 2</h2>
+
+ <h3>Heading 3</h3>
+
+<h4>Heading 4</h4>
+
+<h5>Heading 5</h5>
+
+<h6>Heading 6</h6>
+
+
+
+
+
+
+
+b><i>Hello<u>Friends</u></i></b><br> The chemical formula of water is
+
+
+
+H<sub>2</sub>0<br>
+
+
+
+Today's date is 9<sup>th</sup> December
+
+
+
+2016<br>
+
+
+
+<p>Snippet code for <kbd>for</kbd> loop<br> <code>for(i=0;i<10;i++)<br>
+
+
+
+printf("This statement will be printed 10
+
+
+
+timas");</code></p>
+
+
+
+ <p><samp>samp tag does the same job as code tag</samp></p> p><pre>This text appears in the same way
+
+
+
+ in the browser<br> as it is in the text file
+
+</pre></p> 
+
+
+
+<h4>Bibliography from wildlife
+
+</h4>
+
+
+
+<blockquote>
+
+
+
+For 50 years, WWF has been protecting the future of nature <br>
+
+
+
+WWF is the world's leading conservation
+
+
+
+organisation<br>
+
+
+
+WWF works in 100 countries
+
+</blockquote>
+
+
+</body></html> 
+
+1B] USING DIFF. PAGES & NAVIGATION B/W WEBPAGE
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+<meta charset="UTF-8">
+
+
+
+<title>Hyperlinks in HTML5</title>
+
+
+
+<style>
+
+
+
+a
+
+{
+
+ text-decoration:none;
+
+}
+
+a:link
+
+{
+
+ color: green;
+
+}
+
+a:visited
+
+
+
+{
+
+
+
+color:blue;
+
+
+
+}
+
+
+
+a:hover
+
+
+
+{
+
+
+
+color:red;
+
+
+
+}
+
+
+
+a:active
+
+{
+
+
+
+color:yellow;
+
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<a name="intro"></a>
+
+
+
+<h1 style="font-family: Lucida Handwriting">Welcome to flowers.com</h1>
+
+
+
+<p>Send Flowers Online through flowers.com, the World's Favorite Florist!
+
+
+
+There's no better place to order flowers online than flowers.com. Whether you're looking to buy flowers and gifts like roses, orchids, gift baskets, bonsai trees, flowering plants or wedding bouquets, we have the highest quality blooms and the most talented florists who can create exactly what you order. Dazzle and delight your loved ones wherever they may be with truly original flowers and gifts from flowers.com </p>
+
+
+
+<a href="http://www.flowers.com" style="text- decoration:none">Click here to check out the most exotic flowers in the world</a><br>
+
+
+
+<a
+
+
+
+href="http://www.flowers.com/images/rose.html">Chec k out the latest Rose Images</a><br><!-- Absolute Path -->
+
+
+
+<a href="jasmines.html" target="_blank">Check out the latest Jasmine Images</a><br>
+
+ <!-- Relative Path -->
+
+
+
+Contact <a href="mailto:support@flowers.com"
+
+
+
+title="Please contact us for any queries">support@flowers.com</a><br>
+
+
+
+<a href="#intro">Click here to go the top section</a>
+
+
+
+</body>
+
+
+
+
+</html>
+
+1C] WEBPAGE  REDIRECTS USER TO ANOTHER PAGE  
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+<title>Redirecting to another URL</title>
+
+
+
+<meta http-equiv="refresh"
+
+
+
+content="5;url=https://www.google.com/" />
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>Google</h1>
+
+
+
+<p>you'll be redirected to Google Homepage, in 5 seconds.</p>
+
+
+
+</body>
+
+
+
+
+</html>
+
+2A] DEMONSTRARTING DIFF. STYLE-SHEET TYPES
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+<meta charset="UTF-8">
+
+
+
+<title>Types of CSS</title>
+
+
+
+<style>
+
+
+
+<!-- Internal CSS -->
+
+
+
+b
+
+
+
+{
+
+
+
+color: maroon;
+
+
+
+margin-left: 40px;
+
+}
+
+
+
+</style>
+
+
+
+<link rel="stylesheet" href="StyleSheet.css">
+
+
+
+<!-- External CSS -->
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1 style="background-color: Aqua; font- style:italic">WP</h1>
+
+
+
+<!-- Inline CSS -->
+
+
+
+<b>MPA</b><br>
+
+
+
+<b>NSM</b>
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+File Name :- StyleSheet.css
+
+
+
+body
+
+
+
+{
+
+background-image: url(index.png);
+
+
+
+background-repeat: no-repeat;
+
+
+}
+
+2B] DEMONSTRARTING GROUPING SELECTORS 
+
+<html>
+
+
+
+<head>
+
+
+
+<title>Grouping of CSS selectors</title>
+
+
+
+<style type="text/css">
+
+h1,h2,h3 {
+
+
+
+color:red;
+
+
+
+font-style:bold;
+
+
+
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>CSS </h1>
+
+
+
+<h2>CSS selectors</h2>
+
+
+
+<h3>Grouping of CSS selectors</h3>
+
+
+
+</div>
+
+
+
+</body>
+
+
+
+
+</html>
+
+3A] WEBPAGES DEMONSTRATING DIFF. SEMANTICS
+
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title> Semantic tags </title>
+
+</head>
+
+<body>
+
+<header>
+
+<h1 style="color: blue; font-family:monotypeCorsiva:
+
+text-align: center"> The ACE Company </h1>
+
+<h4 style= "Color: teal; font-family:monotypeCorsiva:
+
+text-align: center"> Helping you with your IT needs !!!!
+
+</h4>
+
+</header>
+
+<nav>
+
+<hr>
+
+<p style="margin: 0px">
+
+<a href=" account, html"> <img src="account.png"></a>
+
+<a href="Schedule.html"> <img src="Cloud.png">
+
+ </a>
+
+<ahref="Schedule.html"> <img src="Schedule.png"> </a>
+
+<ahref=" Search.html"> <img src="search.png"> </a>
+
+<a href." Settings.html"> <img src="setting.png">
+
+</a>
+
+<a href=" share. html "> <img src=" Share. Png">
+
+ </a>
+
+<a href="upload.html"> <img Src= "upload.png">
+
+</a>
+
+</p>
+
+<hr>
+
+</nav>
+
+<article>
+
+<p> <b> New articles! </b> Check out these recently
+
+Posted articles.
+
+<h3> mobile app development </h3>
+
+we have just started bolding Customized mobile applications ranging from PC to mobile phones. <IP>Visit the <a href="mobile apps.html"> mobile apps</a> page for more details
+
+</articles>
+
+<aside>
+
+<p> <b> what does <i> that </i> mean? </b> Run into
+
+an unfamiliar IT related term?
+
+Look it up in cor <a bref =" glossary.html" target="_blank"> glossary </a> Page.</P>
+
+<aside>
+
+<footer>
+
+<p> Copyright & Copy; 2019 the ACE
+
+Company &trade; <br>
+
+No material may be reproduced without written Permission <br>
+
+<ahref="mailto: webmaster@aca. Com"
+
+title=" Webmaster@ace.com"> Contact the webmaster </a> </p>
+
+</footer>
+
+</body>
+
+
+</html>
+
+3B]EMBEDDING IMAGE,AUDIO,VIDEO
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF -8">
+
+<title>Audios and video in HTMLS </title>
+
+</head>
+
+</body>
+
+<audio src ="S title monkeys.mps" control></audio>
+
+<hr>
+
+<object width ="400" height -"400
+
+data ="Bannersnacker SWf type ="application/X-shockwave flash"></object>
+
+<hr>
+
+<video src ="movie.mp4"width="320"
+
+height -"240"loop control></video>
+
+<hr>
+
+<video width ="400" height="300"control>
+
+<source src = "Donold Duck .39"type="video 39pp">
+
+<source src="movie mp4"typemp4">
+
+<source src ="Mickey mouse mp4" type="video mp4" >
+
+</video>
+
+<hr>
+
+<embed src ="movie mp4 " width ="320" height ="240"allowscript access ="allowfullscreen = "true">
+
+</body>
+
+
+</html>
+
+4A] WITH DIFF TABLES
+
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+
+<META CHAR SET="UTF-8">
+
+<Title> Table</title>
+
+</Head>
+
+<Body>
+
+<Table border="8">
+
+<Tr>
+
+<Th colspan="5"> Room tariff </th>
+
+</Tr>
+
+<Th rowspan="3">Room type </th>
+
+<Th colspan="2">Delux</th>
+
+<Th colspan="2">Executive</th>
+
+</Tr>
+
+<Tr>
+
+<th>Ac</th>
+
+<th>No ac</th>
+
+<Th>ac</Th >
+
+<Th> non ac</Th>
+
+</Tr>
+
+<tr>
+
+<td>Rs 1500</td>
+
+<td>Rs 1000</td>
+
+<td>Rs 2500</td>
+
+<td>Rs  1500</td>
+
+</Tr>
+
+</Table>
+
+</Body>
+
+
+</Html>
+
+4B] WITH FORM THAT USE ALL TYPES OF CONTROLS
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Registration Form</title>
+
+<style>
+
+body
+
+background-image:url(colors.jpg);
+
+</style>
+
+</head>
+
+<body>
+
+<form name="fl" method="post" action="test.php" enctype="text/plain">
+
+<h1><center>Registration form</center> </h1>
+
+<table>
+
+<tr>
+
+<id>Enter your name</td>
+
+<td><input type="text" name="t1" size="30"
+
+maxlength="15" required></td>
+
+</tr>
+
+<tr>
+
+<td>Enter your home address</td>
+
+<td><textarea name="addr" rows="4" cols="40"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>Select your city</td>
+
+<td><select name="city">
+
+<option value="Mumbai">Mumbai</option>
+
+<option value="Pune">Pune</option>
+
+<option value="Chennai">Chennai</option>
+
+</select>
+
+</td>
+
+</tr>
+
+<5>
+
+<td>Enter your country name</td> <td><input type="text" name="country" value="India"> </td>
+
+</tr>
+
+<tr>
+
+<td>Select your birthdate</td>
+
+<td><input type="date" name="birthdate"></td>
+
+</tr>
+
+<tr>
+
+<td>Select your Gender</td>
+
+<td><input type="radio" name="gender" value="Male">Male<br>
+
+<input type="radio" name="gender" value="Female" checked>Female</td>
+
+</tr>
+
+<tr>
+
+(Lab Manual)....Page no. (L-7)
+
+<td>Enter your E-mail ID</td>
+
+<td><input type="email" name="emailid"></td>
+
+</tr>
+
+<tr>
+
+<td>Select your Qualification</td>
+
+<td><input type="checkbox" name="cl" value="SSC">SSC<br>
+
+<input type="checkbox" name="c2" value="HSC">HSC<br>
+
+<input type="checkbox" name="c3" value="Graduate">Graduate<br>
+
+<input type="checkbox" name="c4" value="Post Graduate">Post Graduate
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Enter your Password</td>
+
+<td><input type="password"
+
+name="passwords"> </td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="Submit"></td>
+
+<td><input type="reset" value="Clear"> </td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+
+</html>
+
+5A]WEBPAGE TO ACCEPT NO.OF USER & PRINT ITS FACTORIAL
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Factorial program in Javascript</title>
+
+<script type="text/javascript">
+
+	function Factorial()
+
+	{
+
+	var n=parseInt(fl.tl.value);
+
+	var f=1,i;
+
+	for(i=1;i<=n;i++)
+
+	   f=f*i;
+
+	fl.t2.value=f;
+
+	}
+
+</script>
+
+</head>
+
+<body>
+
+<form name="fl">
+
+<table>
+
+<tr>
+
+<td colspan="2">Factorial Number</td>
+
+</tr>
+
+<tr>
+
+<td>Enter a number</td>
+
+<td><input type="text" name="t1"></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="Click here" onClick="Factorial()"></td>
+
+<td><input type="reset" value="Clear"></td>
+
+</tr>
+
+<tr>
+
+<td>Result</td>
+
+<td><input type="text" name="12" size="30"></td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+
+</html>
+
+5D]JAVASCRIPT PROGRAM ACCEPT NO. FROM USER & DISPLAY DIGITS
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Sum of digits of a number</title>
+
+<script type="text/javascript">
+
+function sum()
+
+{
+
+	var a=parseInt(fl.tl.value);
+
+	var d=r=0, e=a;
+
+	while(a>0)
+
+	{
+
+		d=a%10;
+
+		a=Math.floor(a/10);
+
+		r=r+d;
+
+	}
+
+	alert("The sum of digits of a number "+e+" is"+r);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<form name="fl" onsubmit="sum()">
+
+<table>
+
+<tr>
+
+<td colspan="2">Sum of digits of a number</td>
+
+</tr>
+
+<tr>
+
+<td>Enter a Number</td>
+
+<td><input type="text" name="t1"></td>
+
+</tr>
+
+<td><input type="submit" value="Submit"></td>
+
+<tr>
+
+<td><input type="reset" value="Clear"> </td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+
+</html>
+
+6A]JAVASCRIPT,DESIGN DIFF.NATIVE OBJECTS OF  JAVASCRIPTS
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset = "UTF-8">
+
+<title>Array in Java</title>
+
+<Script type =" text/javascript">
+
+var fruits,cars,a,b,i;
+
+fruits=new Array("Apple","banana","strawberry");
+
+Cars=new Array("Innova","BMW");
+
+ 
+
+document.write("<br>Array fruits has elements:");
+
+for(i in fruits)
+
+      document.write(fruits[i]+" ");
+
+
+
+document.write("<br>Array cars has elements:");
+
+for(i in cars)
+
+      document.write(cars[i]+"  ");
+
+
+
+a=fruit.concat(cars);
+
+document.write("<br>Concantention of the fruits and cars is :"+a);
+
+
+
+b=fruits.join("and");
+
+document.write("<br>Join of fruits is:"+b);
+
+
+
+fruits.pop();
+
+document.write("<br>After removing last element of fruits is:"+fruits);
+
+
+
+fruits.push("Orange");
+
+document.write("<br>After adding new element orange fruit is :"+fruits);
+
+
+
+fruits.reverse();
+
+document.write("<br>Reverse of fruits is:"+fruits);
+
+
+
+fruits.shift();
+
+document.write("<br>After removing fruits elements fruits is:"+fruits);
+
+
+
+fruits.unshift("custard apple");
+
+document.write("<br>After adding elemets Custard Apple at first position fruits is:"+fruits);
+
+
+
+cars.sort();
+
+document.write("<br>After sorting cars is:"+cars);
+
+
+
+</script>
+
+</head>
+
+</body>
+
+
+</html>
+
+9A]PHP CODE FIND GREATER OF 2 NO.FROM USER
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Greatest of two Numbers</title>
+
+</head>
+
+<body>
+
+<form name="fl" method="get"
+
+action="http://localhost:7080/PHPCodes/great.php">
+
+<table>
+
+<tr>
+
+<td colspan="2">Greatest of two Numbers</td>
+
+</tr>
+
+<tr>
+
+<td>Enter 1st number</td>
+
+<td><input type="text" name="t1"></td>
+
+</tr>
+
+<tr>
+
+<td>Enter 2nd number</td>
+
+<td><input type="text" name="t2"></td>
+
+</tr>
+
+<tr>
+
+<td><input type="submit" value="Submit"></td>
+
+<td><input type="reset" value="Clear">
+
+</tr>
+
+</table>
+
+</form>
+
+</body
+
+</html>
+
+
+
+great.php:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Greatest of two Numbers</title>
+
+</head>
+
+<body>
+
+<?php
+
+$a=$_REQUEST["t1"];
+
+$b=$_REQUEST["t2"];
+
+if($a>$b)
+
+echo "The greatest of two number is ".$a;
+
+else
+
+echo "The greatest of two number is ".$b;
+
+?>
+
+</body>
+
+
+</html>
+
+9B]PHP PROGRAM  ACCEPT NO. FROM USER AND PRINT FACTORIAL
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Factorial Program in PHP</title>
+
+</head>
+
+<body>
+
+<form name="fl" method="get"
+
+action="http://localhost: 7080/PHPCodes/Fact.php">
+
+<table>
+
+<tr>
+
+<td colspan="2">Factorial of a Number</td>
+
+</tr>
+
+<tr>
+
+<td>Enter a Number</td>
+
+<td><input type="text" name="t1"></td>
+
+</tr>
+
+<tr>
+
+<td><input type="submit" value="Submit"></td>
+
+<td><input type="reset" value="Clear"> </td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+</html>
+
+fact.php
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Factorial Program in PHP </title>
+
+</head>
+
+<body>
+
+</php
+
+$a=$_REQUEST["t1"];
+
+$f=1;
+
+for($i=1;$i<=$a;$i++)
+
+     $f=$f*$i;
+
+echo "The Factorial of ".$a."is.$f;
+
+?>
+
+</body>
+
+
+</html>
+
+9C]PHP PROGRAM ACCEPT NO. FROM USER PRIME OR NOT.
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Prime Numbers Program in PHP</title>
+
+</head>
+
+<body>
+
+<form name="fl" method="get"
+
+action="http://localhost: 7080/PHPCodes/prime.php">
+
+<table>
+
+<tr>
+
+<td colspan="2">Prime or Composite Numbers</td>
+
+</tr>
+
+<tr>
+
+<td>Enter a Number</td>
+
+<td><input type="text" name="t1"></td>
+
+</tr>
+
+<tr>
+
+<td><input type="submit" value="Submit"></td>
+
+<td><input type="reset" value="Clear"> </td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+</html>
+
+Prime.php
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Prime Numbers Program in PHP</title>
+
+</head>
+
+<body>
+
+<?php
+
+$a=$_REQUEST["11"];
+
+$c=0;
+
+for($i=1;$i<=$a;$i++)
+
+{
+
+if($a%$i==0) $c++;
+
+}
+
+if($a==1)
+
+echo "$a is neither prime nor composite number":
+
+else if($c==2)
+
+echo " Sa is a prime number";
+
+else
+
+echo"$a is a composite number";
+
+?>
+
+</body>
+
+
+</html>
+
+9F]PHP PROGRAM TO DIFF. ARRAY FUNCTIONS 
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Numeric Array in PHP</title>
+
+</head>
+
+<body>
+
+<?php
+
+$student=array(90,85,80);
+
+$student1[0]=100;
+
+$student1[1]=95;
+
+$student1[2]=85;
+
+echo $student[0]."and".$student[1]."are the highest scores<br>";
+
+echo $student1[0]."and".$student1[1]."are the highest scores";
+
+?>
+
+</body>
+
+
+</html>
+
+10A]USE OF SESSIONS AND COOKIES 
+
+A]
+
+<!DCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Session Creation in PHP</title>
+
+</head>
+
+<body>
+
+<?php
+
+session_start();
+
+if(isset($_SESSION['count']))
+
+{
+
+	 $_SESSION['count'] += 1;
+
+}
+
+else
+
+{
+
+	$_SESSION['count'] = 1;
+
+} 
+
+echo "You are visitor number".$_SESSION['count'];
+
+?>
+
+</body>
+
+
+</html>
+
+B]
+
+<!DCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Cookie Creation in PHP</title>
+
+</head>
+
+<body> 
+
+<?php
+
+$cookie_name="User";
+
+$cookie_value="Avinash Sharma";
+
+setcookie($cookie_name,$cookie_value);
+
+if(!isset($_COOKIE[$cookie_name]))
+
+{
+
+	echo"Cookie named'".$cookie_name."'is not set!<br>";
+
+}
+
+else
+
+{
+
+	echo"Cookie named'".$cookie_name."'is set!<br>";
+
+	echo"Cookie Value is:" 
+
+.$_COOKIE[$cookie_name]; 
+
+}
+
+?>
+
+</body> 
+
+
+</html>
+
+11 A]PHP CODE TO CREATE DATABASE COLLEGE & TABLE DEPARTMENT
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Database and Table Creation in MySQL</title>
+
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+<?php
+
+$con=mysql_connect("localhost","root","bscit");
+
+if(!$con)
+
+       die("Could not connect ".mysql_error($con));
+
+else
+
+{
+
+if(mysql_query("create database college",$con))
+
+echo "Database created successfully";
+
+else
+
+echo "Error creating database:
+
+".mysql_error($con);
+
+mysql_select_db("College",$con);
+
+if(mysql_query("create table department(dname varchar(50),dno smallint,no_of_faculty smallint)))
+
+echo "Table created successfully";
+
+else
+
+echo "Error creating table: "
+
+.mysql_error($con);
+
+}
+
+mysql_close($con);
+
+?>
+
+</body>
+
+
+</html>
+
+
+
+                                                                                                THANK YOU
